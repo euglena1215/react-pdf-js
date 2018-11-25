@@ -13,7 +13,7 @@ export default class ReactPdfJs extends Component {
     scale: PropTypes.number,
     cMapUrl: PropTypes.string,
     cMapPacked: PropTypes.bool,
-    style: PropTypes.string.isRequired,
+    style: PropTypes.object.isRequired,
     className: PropTypes.string,
   };
 
