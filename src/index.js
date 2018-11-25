@@ -53,10 +53,12 @@ export default class ReactPdfJs extends Component {
   }
 
   drawPDF = page => {
-    const { scale } = this.props;
+    const { scale, style } = this.props;
     const viewport = page.getViewport(scale);
     const { canvas } = this;
     const canvasContext = canvas.getContext("2d");
+    canvasContext.height = style.height;
+    canvasContext.width = style.width;
     const renderContext = {
       canvasContext,
       viewport,
